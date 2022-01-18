@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+ 
+<head> 
+ <meta charset="utf-8"> 
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+ <title></title> 
+  
+</head> 
+<body> 
+ <center> 
+ 
+ <h1>DATA STORED SUCCESSFULLY</h1>&nbsp;&nbsp; 
+ {% if data %} 
+ <table border="2px" > 
+  <caption>THE DATA THAT IS STORED IN THE DATABASE</caption> 
+  <thead> 
+   <tr> 
+    <th>userfname</th> 
+    <th>usersname</th> 
+    <th>useremailid</th> 
+    <th>order</th>
+    <th>message</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td>{{data.userfname | upper}}</td> 
+    <td>{{data.usersname | upper}}</td> 
+    <td>{{data.useremailid | upper}}</td>
+    <td>{{data.userorder | upper}}</td>
+    <td>{{data.message | upper}}</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ {% endif %} 
+ </center> 
+</body> 
+</html>
